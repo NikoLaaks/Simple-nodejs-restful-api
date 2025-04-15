@@ -1,5 +1,5 @@
 body{
-    background-color: #474646;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     
@@ -8,7 +8,14 @@ h1{
     align-self: center;
     font-size: 45px;
     text-decoration: underline;
-    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
 }
 
 .recipe-list {
