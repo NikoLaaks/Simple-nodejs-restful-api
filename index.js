@@ -47,9 +47,9 @@ app.delete("/api/recipes/:id", (req,res) => {
     const id = Number(req.params.id)
     if(recipes.find(recipe => recipe.id === id)){
         recipes = recipes.filter(recipe => recipe.id != id)
-        res.status(200).json({id : id})
+        res.status(200).json({id : id, msg: "recipe deleted"})
     }else{
-        res.status(404).json({Response_body: "Error when deleting recipe"})
+        res.status(404).json({msg: "Error when deleting recipe"})
     }
 })
 
