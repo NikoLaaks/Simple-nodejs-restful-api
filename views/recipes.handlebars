@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+
+<div class="recipe-list">
+    {{#each recipes}}
+        <div class="recipe-card">
+            <h2>{{this.title}}</h2>
+            <p><strong>Author:</strong> {{this.author.name}}</p>
+            <p><strong>Cook Time:</strong> {{this.cookTimeMinutes}} minutes</p>
+            <p><strong>Vegetarian:</strong> {{#if this.vegetarian}} Yes {{else}} No {{/if}}</p>
+            <p><strong>Created At:</strong> {{this.createdAt}}</p>
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+                {{#each this.ingredients}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    {{/each}}
+</div>
